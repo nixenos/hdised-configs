@@ -32,3 +32,73 @@ select json_source.request_endpoint,
        count(json_source.request_timestamp)
 from jsonified_hdised_dw_source as json_source
 group by json_source.request_endpoint;
+
+
+select *
+from jsonified_hdised_dw_source;
+
+
+create view average_request_count as
+select avg(counts)
+from
+  (select count(*) as counts
+   from jsonified_hdised_dw_source as json_source
+   group by json_source.source_ip);
+
+
+create view average_request_count_per_ip as
+select json_source.source_ip,
+       count(*) as counts
+from jsonified_hdised_dw_source as json_source
+group by json_source.source_ip;
+
+
+create view request_count_per_ip as
+select json_source.source_ip as source_ip,
+       count(*) as counts
+from jsonified_hdised_dw_source as json_source
+group by json_source.source_ip;
+
+
+create view highest_number_of_requests as
+select req_count_per_ip.source_ip,
+       req_count_per_ip.counts
+from request_count_per_ip as req_count_per_ip
+order by req_count_per_ip.counts desc
+limit 1;
+
+
+create view http_good_responses as
+select *
+from jsonified_hdised_dw_source as json_source
+where json_source.response_code like '2%';
+
+
+create view http_redirect_responses as
+select *
+from jsonified_hdised_dw_source as json_source
+where json_source.response_code like '3%';
+
+
+create view http_client_error_responses as
+select *
+from jsonified_hdised_dw_source as json_source
+where json_source.response_code like '4%';
+
+
+create view http_server_error_responses as
+select *
+from jsonified_hdised_dw_source as json_source
+where json_source.response_code like '5%';
+
+
+create view bot_requests_filtered as
+select *
+from jsonified_hdised_dw_source as json_source
+where json_source.http_client_user_agent like '%bot%';
+
+
+create view human_requests_filtered as
+select *
+from jsonified_hdised_dw_source as json_source
+where json_source.http_client_user_agent not like '%bot%';
