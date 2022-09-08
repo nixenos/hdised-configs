@@ -1,0 +1,380 @@
+{
+	"info": {
+		"_postman_id": "3b66e3c9-0eaa-41ac-9cee-8d8cb638028d",
+		"name": "HDISED",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23180438"
+	},
+	"item": [
+		{
+			"name": "Get server data",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "192.168.1.20:5000/",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"20"
+					],
+					"port": "5000",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all records",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/requests/all",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"requests",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get requests count by IP",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "192.168.1.20:5000/requests/count/by-ip",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"20"
+					],
+					"port": "5000",
+					"path": [
+						"requests",
+						"count",
+						"by-ip"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get average requests count",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/requests/count/average",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"requests",
+						"count",
+						"average"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get IP with highest requests count",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "192.168.1.20:5000/requests/count/most-requests",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"20"
+					],
+					"port": "5000",
+					"path": [
+						"requests",
+						"count",
+						"most-requests"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get list of responses with 200 HTTP code",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/responses/http-good/all",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"responses",
+						"http-good",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get count of responses with 200 HTTP code",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "192.168.1.20:5000/responses/http-good/all/count",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"20"
+					],
+					"port": "5000",
+					"path": [
+						"responses",
+						"http-good",
+						"all",
+						"count"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get count of responses with 200 HTTP code per IP",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "192.168.1.20:5000/responses/http-good/all/count/by-ip",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"20"
+					],
+					"port": "5000",
+					"path": [
+						"responses",
+						"http-good",
+						"all",
+						"count",
+						"by-ip"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get list of responses with 200 HTTP code for IP",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/responses/http-good/2.178.5.1",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"responses",
+						"http-good",
+						"2.178.5.1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get count of responses with 200 HTTP code for IP",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/responses/http-good/2.178.5.1/count",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"responses",
+						"http-good",
+						"2.178.5.1",
+						"count"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Count all requests",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "192.168.1.20:5000/requests/all/count",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"20"
+					],
+					"port": "5000",
+					"path": [
+						"requests",
+						"all",
+						"count"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Count bots requests",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "192.168.1.20:5000/requests/bots/count",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"20"
+					],
+					"port": "5000",
+					"path": [
+						"requests",
+						"bots",
+						"count"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Count humans requests",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/requests/humans/count",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"requests",
+						"humans",
+						"count"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List bots requests",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "192.168.1.20:5000/requests/bots",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"20"
+					],
+					"port": "5000",
+					"path": [
+						"requests",
+						"bots"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List humans requests",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/requests/humans",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"requests",
+						"humans"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List requests count per endpoint desc",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "192.168.1.20:5000/requests/per-endpoint/desc",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"20"
+					],
+					"port": "5000",
+					"path": [
+						"requests",
+						"per-endpoint",
+						"desc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List requests count per endpoint desc limit",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "192.168.1.20:5000/requests/per-endpoint/desc/10",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"20"
+					],
+					"port": "5000",
+					"path": [
+						"requests",
+						"per-endpoint",
+						"desc",
+						"10"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
